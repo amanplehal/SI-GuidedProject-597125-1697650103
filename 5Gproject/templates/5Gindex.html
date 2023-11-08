@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <style>
+        label{
+            padding:15px 0px 15px 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    
+
+
+    <main>
+        <h1 class="text-center">AI 5G Resource Alocation</h1>
+        <center>
+            <form action="/task" method ="post" class="form bg-warning" style="max-width:40%; border-radius: 15px;">
+                <table>
+                    <tr>
+                        <td><label class="form-label me-5">Application Type</label></td>
+                        <td>
+                            <select class="form-select" name="at">
+                                <option>Streaming</option>
+                                <option>Video_Call</option>
+                                <option>Emergency_Service</option>
+                                <option>Online_Gaming</option>
+                                <option>Background_Download</option>
+                                <option>Web_Browsing</option>
+                                <option>IoT_Temperature</option>
+                                <option>File_Download</option>
+                                <option>Video_Streaming</option>
+                                <option>VoIP_Call</option>
+                                <option>Voice_Call</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                       <td><label class="form-label me-5">Latency</label></td>
+                       <td><input class="form-control rounded" type="number" name="l" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label class="form-label me-5">Signal Strength</label></td>
+                        <td><input class="form-control rounded" type="number" name="ss" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label class="form-label me-5">Required Bandwidth</label></td>
+                        <td><input class="form-control rounded" type="number" name="r" required></td>
+                    </tr>
+
+                    <tr>
+                        <td><label class="form-label me-5">Allocated Bandwidth</label></td>
+                        <td><input class="form-control rounded" type="number" name="ab" required></td>
+                    </tr>
+
+
+                    <tr>
+                        <td colspan="2" class="text-center">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                            <button class="btn btn-outline-primary" type="reset">Reset</button>
+                        </td>
+                    </tr>
+                </table>
+                  
+            </form>
+            </br>
+            <table  action="/task" method ="post"  class=" bg-success" style="color:white; max-width:40%; border-radius: 15px;">
+             <tr>
+                 <td><label class="form-label me-5"  >Resource allocation(in %)</label></td>
+                 <td><output name =percentage></output></td>
+             </tr>
+             </table>
+            <p><b>{{y}}</b></p>
+        </center>
+    </main>
+
+   
+</body>
+</html>
